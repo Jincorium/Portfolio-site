@@ -6,9 +6,9 @@
   <title>Nikita Lobastov</title>
   <link rel="stylesheet" href="Portfolio.css" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="portfolio.js" defer></script>
 
   <style>
-    /* Play button overlay and video iframe styling */
     .video-wrapper {
       position: relative;
       cursor: pointer;
@@ -67,13 +67,14 @@
         <img src="donationalerts-seeklogo.svg" alt="Donate" class="donation-icon">
       </a>
     </div>
-<div class="email">
-  <a href="mailto:lobastovn04@gmail.com">lobastovn04@gmail.com</a>
-</div>
+    <div class="header-right">
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
+    <button id="warm-mode-toggle" aria-label="Toggle Night Read Mode">🙈</button>
+    </div>
   </header>
 
   <div class="container">
-    <aside>
+<aside>
       <h1>Nikita Lobastov</h1>
       <nav>
         <ul>
@@ -81,62 +82,64 @@
           <li><a href="contacts.html">Contacts</a></li>
         </ul>
       </nav>
-      <div class="icons">
-        <div class="icons" style="margin-top: auto;">
-        <a href="https://www.instagram.com/barackobama/" target="_blank">
-        <img src="Instagram.png" alt="Instagram" class="icon" />
-        </a>
-        </div>
+      <div class="icons" style="margin-top:5px;">
+          <a href="https://www.instagram.com/barackobama/" target="_blank" style="font-size: 1.5rem; text-decoration: none;">🌅</a>
+      </div>
+      <div class="icons" style="margin-top:5px;">
+          <a href="mailto:lobastovn04@gmail.com" target="_blank" style="font-size: 1.5rem; text-decoration: none;">✉️</a>
+      </div>
     </aside>
 
-    <main id="content">
-      <div class="grid">
-        <div class="card">
-          <img src="https://www.cdjlawjournal.com/dE!T@/image_attachment/1187389422download%20(2).jpeg" alt="CDJ Law Journal" />
-          <h3>Supreme Court upholds inclusive digital access as a part of fundamental right to life </h3>
-          <p>Civil Times</p>
-        </div>
-
-       <div class="card video-card" data-video-id="f9u63nHzMuY">
-          <div class="video-wrapper">
-            <img src="2025-04-14T000121Z_520628190_RC23MDASKHTQ_RTRMADP_3_CHINA-SOUTHEAST-ASIA-VIETNAM.jpg" alt="China's economy" />
-            <div class="play-button"></div>
-          </div>
-          <h3>Xi says China's economy should adapt to external changes</h3>
-          <p>Economy</p>
-        </div>
-
-
-
-        <div class="card">
-            <a href="osaka-article.html">
-            <img src="Osaka.jpg" alt="Osaka Expo" />
-          </a>
-          <h3>As The U.S Marks 1 Million COVID-19 Deaths...</h3>
-          <p>USA Today</p>
-        </div>
+  <main id="content">
+  <div class="grid">
+    <div class="card">
+      <img src="https://www.cdjlawjournal.com/dE!T@/image_attachment/1187389422download%20(2).jpeg" alt="CDJ Law Journal"  />
+      <h3>Supreme Court upholds inclusive digital access as a part of fundamental right to life </h3>
+      <div class="tags">
+        <span class="tag">#USA</span>
+        <span class="tag">#court</span>
       </div>
-    </main>
+    </div>
+
+    <div class="card video-card" data-video-id="f9u63nHzMuY">
+      <div class="video-wrapper">
+        <img src="2025-04-14T000121Z_520628190_RC23MDASKHTQ_RTRMADP_3_CHINA-SOUTHEAST-ASIA-VIETNAM.jpg" alt="China's economy"  />
+        <div class="play-button"></div>
+      </div>
+      <h3>Xi says China's economy should adapt to external changes</h3>
+      <div class="tags">
+        <span class="tag">#china</span>
+        <span class="tag">#economy</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="Manga.html">
+      <img src="maxresdefault-2070216691.jpg" alt="Manga-caused panic"  />
+      </a>
+      <h3>A Manga Is Causing Earthquake Panic in Japan </h3>
+      <div class="tags">
+        <span class="tag">#japan</span>
+        <span class="tag">#earthquake</span>
+        <span class="tag">#manga</span>
+        <span class="tag">#profecy</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="osaka-article.html">
+        <img src="Osaka.jpg" alt="Osaka Expo"  />
+      </a>
+      <h3>Shigeru Ban tackles marine plastic pollution...</h3>
+      <div class="tags">
+        <span class="tag">#japan</span>
+        <span class="tag">#expo</span>
+        <span class="tag">#osaka</span>
+      </div>
+    </div>
   </div>
-
-  <script>
-    document.querySelectorAll('.video-card').forEach(card => {
-      const wrapper = card.querySelector('.video-wrapper');
-      const videoId = card.getAttribute('data-video-id');
-
-      wrapper.addEventListener('click', () => {
-        const iframeWrapper = document.createElement('div');
-        iframeWrapper.classList.add('video-iframe');
-
-        iframeWrapper.innerHTML = `
-          <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen></iframe>`;
+</main>
 
 
-        wrapper.replaceWith(iframeWrapper);
-      });
-    });
-  </script>
 </body>
 </html>
